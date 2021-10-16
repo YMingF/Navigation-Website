@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>前航网站</title>
+    <link rel="stylesheet" href="5825085afe161482f4540426b0250d06">
+    <style data-parcel-key="2b6526fb42f9d0134b5d324086fee47b">
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="globalHeader">
+      <form class="searchForm" method="GET" action="https://www.baidu.com/s">
+        <input name="wd" type="text">
+        <button type="submit">搜索</button>
+      </form>
+    </header>
+
+    <main class="globalMain">
+      <ul class="siteList">
+        <!--新增元素导航栏-->
+        <li class="last">
+          <!--这里加last是为方便JS里新建的节点能插入到li前面-->
+          <div class="addButton">
+            <div class="iconWrapper">
+              <svg class="icon">
+                <use xlink:href="#icon-add"></use>
+              </svg>
+            </div>
+            <div class="text">新增网站</div>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="31b12adc192dd4c154d4efeffcf3ead4"></script>
+    <script src="278700badb54fb306cb49a95f21c3ff5"></script>
+    <script src="609ad5501232ad47c79e40eac7ed5217"></script>
+  </body>
+</html>
