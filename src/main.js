@@ -1,9 +1,35 @@
 const $siteList=$('.siteList')
 const $lastLi=$siteList.find('li.last')//到li里找类为last的元素
-const x=localStorage.getItem('x')
-const xObject=JSON.parse(x)
+function setCookie(c_name,value,expiredays)
+{
+    var exdate=new Date()
+    exdate.setDate(exdate.getDate()+expiredays)
+    document.cookie=c_name+ "=" +escape(value)+
+        ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+
+//取回cookie
+function getCookie(c_name)
+{
+    if (document.cookie.length>0)
+    {
+        c_start=document.cookie.indexOf(c_name + "=")
+        if (c_start!=-1)
+        {
+            c_start=c_start + c_name.length+1
+            c_end=document.cookie.indexOf(";",c_start)
+            if (c_end==-1) c_end=document.cookie.length
+            return unescape(document.cookie.substring(c_start,c_end))
+        }
+    }
+    return ""
+}
+//
+const x=getCookie('x');
+console.log( x);
+const xObject=JSON.parse(x||null)
 //用数组
-const hashMap=xObject || [  //一开始xObject可能为空,所以要用||，即如果xObject为空,那就去用后面的数据赋值
+const hashMap= xObject|| [  //一开始xObject可能为空,所以要用||，即如果xObject为空,那就去用后面的数据赋值
     {logo:'A' ,url:'https://www.acfun.cn' },
     {logo: 'B',url:'https://www.bilibili.com/' },
 ]
@@ -43,7 +69,7 @@ const render=()=>{
     })
     //在你关闭或刷新页面时触发
     const string=JSON.stringify(hashMap)//将对象转换成字符串
-    localStorage.setItem('x',string)//在本地的存储里设置一个x ，值为string
+    setCookie('x',string,365);
 }
 render()
 //监听点击事件
