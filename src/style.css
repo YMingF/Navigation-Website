@@ -108,6 +108,16 @@ body {
   position: relative;
   cursor: pointer; /*让鼠标变成手的样式形状*/
 }
+@media (max-width: 360px) {
+  .siteList .site{
+    width: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .siteList .site{
+    width: 135px;
+  }
+}
 .siteList .site > .logo {
   width: 64px;
   height: 64px;
@@ -141,6 +151,16 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+}
+@media (max-width: 360px) {
+  .siteList .addButton{
+    width: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .siteList .addButton{
+    width: 135px;
+  }
 }
 .siteList .addButton .icon {
   width: 64px;

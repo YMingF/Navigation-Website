@@ -58,10 +58,9 @@ $('.addButton')
         render()
 });
 
-window.onbeforeunload=()=>{//在你关闭或刷新页面时触发
-    const string=JSON.stringify(hashMap)//将对象转换成字符串
-    localStorage.setItem('x',string)//在本地的存储里设置一个x ，值为string
-}
+//在你关闭或刷新页面时触发
+const string=JSON.stringify(hashMap)//将对象转换成字符串
+localStorage.setItem('x',string)//在本地的存储里设置一个x ，值为string
 
 $(document).on('keypress',(e)=>{
     const {key}=e//获取到你按的是哪一个按键
