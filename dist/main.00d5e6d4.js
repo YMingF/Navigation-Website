@@ -133,6 +133,9 @@ var render = function render() {
             render(); //重新渲染
         });
     });
+    //在你关闭或刷新页面时触发
+    var string = JSON.stringify(hashMap); //将对象转换成字符串
+    localStorage.setItem('x', string); //在本地的存储里设置一个x ，值为string
 };
 render();
 //监听点击事件
@@ -150,12 +153,6 @@ $('.addButton').on('click', function () {
     render();
 });
 
-window.onbeforeunload = function () {
-    //在你关闭或刷新页面时触发
-    var string = JSON.stringify(hashMap); //将对象转换成字符串
-    localStorage.setItem('x', string); //在本地的存储里设置一个x ，值为string
-};
-
 $(document).on('keypress', function (e) {
     var key = e.key; //获取到你按的是哪一个按键
 
@@ -167,4 +164,4 @@ $(document).on('keypress', function (e) {
     }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ab187e4c.map
+//# sourceMappingURL=main.00d5e6d4.map
