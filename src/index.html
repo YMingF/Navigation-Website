@@ -21,9 +21,9 @@
   </head>
   <body>
     <header class="globalHeader">
-      <form class="searchForm" method="GET" action="https://www.baidu.com/s">
+      <form class="searchForm" method="GET" name="addForm" action="https://www.baidu.com/s" onsubmit="return test()">
         <input name="wd" type="text" />
-        <button type="submit">搜索</button>
+        <button id="searchButton" type="submit">搜索</button>
       </form>
     </header>
 
