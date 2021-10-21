@@ -134,6 +134,7 @@ body {
 }
 .siteList .site > .close {
   position: absolute;
+  font-size: 32px;
   right: 10px;
   top: 5px;
   display: none; /*隐藏*/
