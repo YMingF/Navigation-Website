@@ -2,14 +2,7 @@ const $siteList=$('.siteList')
 const $lastLi=$siteList.find('li.last')//到li里找类为last的元素
 const $searchButton=$('#searchButton')
 
-function test(){
-    if (addForm.wd.value.length===0){
-        alert('请至少填写一个搜索内容！！')
-        addForm.wd.focus()
-        return false
-    }
-    return true
-}
+
 function setCookie(c_name,value,expiredays)
 {
     var exdate=new Date()

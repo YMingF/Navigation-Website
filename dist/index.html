@@ -18,8 +18,8 @@
   </head>
   <body>
     <header class="globalHeader">
-      <form class="searchForm" method="GET" name="addForm" action="https://www.baidu.com/s" onsubmit="return test()">
-        <input name="wd" type="text">
+      <form class="searchForm" method="GET" id="addForm" action="https://www.baidu.com/s" onsubmit="return Checkname()">
+        <input id="searchInput" name="wd" type="text">
         <button id="searchButton" type="submit">搜索</button>
       </form>
     </header>
@@ -42,6 +42,19 @@
     </main>
     <script src="//at.alicdn.com/t/font_2714447_xbah365cnul.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="main.6a984c94.js"></script>
+    <script src="main.08edcf94.js"></script>
+    <script type="text/javascript">
+      function Checkname() {
+        let Input=document.getElementById('searchInput')
+        let name=Input.value;
+        if (!name) {
+          alert('搜索内容不要为空');
+          Input.focus()
+          return false;
+        }else{
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>
